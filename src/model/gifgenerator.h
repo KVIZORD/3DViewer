@@ -6,12 +6,12 @@
 #include <string>
 #include <vector>
 
-#include "../lib/gif.h"
+#include "lib/gif/gif.h"
 
 namespace s21 {
 
 class GifGenerator {
-public:
+ public:
   GifGenerator() {}
 
   void InitializeGenerator(const std::string &, int, int, int, int);
@@ -25,7 +25,7 @@ public:
 
   ~GifGenerator();
 
-private:
+ private:
   GifWriter gifWriter_{};
   std::string filename_{};
   int width_{};
@@ -38,6 +38,6 @@ private:
   bool initialized_ = false;
 };
 
-} // namespace s21
+}  // namespace s21
 
-#endif // _3DVIEWER_MODEL_INCLUDE_GIFGENERATOR_H_
+#endif  // _3DVIEWER_MODEL_INCLUDE_GIFGENERATOR_H_

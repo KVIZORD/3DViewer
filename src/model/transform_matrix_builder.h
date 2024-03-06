@@ -3,7 +3,7 @@
 
 #include <cmath>
 
-#include "transform_matrix.h"
+#include "model/transform_matrix.h"
 
 namespace s21 {
 

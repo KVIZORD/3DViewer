@@ -3,13 +3,12 @@
 #include <QDir>
 #include <iostream>
 
-#include "controller/include/controller.h"
-#include "model/include/objreader.h"
-#include "model/include/objreaderfast.h"
-#include "model/include/objreaderfast2.h"
-#include "model/include/scene.h"
-#include "view/include/mainwindow.h"
-#include "view/include/scenedrawer.h"
+#include "controller/controller.h"
+#include "model/objreader.h"
+#include "model/objreaderfast2.h"
+#include "model/scene.h"
+#include "view/mainwindow.h"
+#include "view/scenedrawer.h"
 
 const QString kSettingsFileName = QString("settings.conf");
 

@@ -1,8 +1,8 @@
 #ifndef _3DVIEWER_MODEL_INCLUDE_BASEFILEREADER_H_
 #define _3DVIEWER_MODEL_INCLUDE_BASEFILEREADER_H_
 
-#include "normalization_parameters.h"
-#include "scene.h"
+#include "model/normalization_parameters.h"
+#include "model/scene.h"
 
 namespace s21 {
 

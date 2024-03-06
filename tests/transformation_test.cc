@@ -1,4 +1,10 @@
-#include "test.h"
+#include <gtest/gtest.h>
+
+#include <vector>
+
+#include "model/objreader.h"
+#include "model/scene.h"
+#include "model/transform_matrix_builder.h"
 
 namespace s21 {
 
@@ -332,4 +338,4 @@ TEST(ScaleObject, ScaleXYZ) {
   ASSERT_FLOAT_EQ(scene.GetVertices()[8], 765.0 * 3.3);
 }
 
-}  // namespace s21
+} // namespace s21

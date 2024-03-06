@@ -1,4 +1,4 @@
-#include "include/settings.h"
+#include "model/settings.h"
 
 namespace s21 {
 

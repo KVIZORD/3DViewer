@@ -1,4 +1,4 @@
-#include "include/gifgenerator.h"
+#include "model/gifgenerator.h"
 
 namespace s21 {
 
@@ -18,8 +18,7 @@ void GifGenerator::InitializeGenerator(const std::string &filename, int width,
 }
 
 void GifGenerator::AddFrame(const uint8_t *image) {
-  if (!initialized_)
-    return;
+  if (!initialized_) return;
 
   GifWriteFrame(&gifWriter_, image, width_, height_, delay_);
   currentTime_ += delay_;
@@ -45,4 +44,4 @@ GifGenerator::~GifGenerator() {
     GifEnd(&gifWriter_);
   }
 }
-} // namespace s21
+}  // namespace s21

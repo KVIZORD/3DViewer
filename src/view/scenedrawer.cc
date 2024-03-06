@@ -1,4 +1,4 @@
-#include "include/scenedrawer.h"
+#include "view/scenedrawer.h"
 
 #include <QDebug>
 

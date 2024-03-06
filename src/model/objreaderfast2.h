@@ -11,11 +11,11 @@
 namespace s21 {
 
 class OBJReaderFast2 : public BaseFileReader {
-public:
+ public:
   const int kMaxLineLength = 256;
   Scene ReadScene(const std::string &path) const override;
 
-private:
+ private:
   const char kVertexToken = 'v';
   const char kFaceToken = 'f';
   struct Line {
@@ -34,6 +34,6 @@ private:
                                     Scene &scene) const;
 };
 
-} // namespace s21
+}  // namespace s21
 
-#endif // _3DVIEWER_MODEL_INCLUDE_OBJREADERFAST2_H_
+#endif  // _3DVIEWER_MODEL_INCLUDE_OBJREADERFAST2_H_

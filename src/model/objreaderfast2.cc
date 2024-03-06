@@ -1,4 +1,4 @@
-#include "include/objreaderfast2.h"
+#include "model/objreaderfast2.h"
 
 #include <cstring>
 #include <locale>
@@ -132,4 +132,4 @@ void OBJReaderFast2::ResizeLine(Line *line) const {
   line->buf = new_str;
 }
 
-} // namespace s21
+}  // namespace s21

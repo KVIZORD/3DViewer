@@ -1,4 +1,4 @@
-#include "include/controller.h"
+#include "controller/controller.h"
 
 #include <stdexcept>
 
@@ -6,7 +6,8 @@ namespace s21 {
 
 Controller::Controller(BaseFileReader &file_reader_,
                        SceneDrawerBase &scene_drawer_, MySettings &settings_)
-    : file_reader_(file_reader_), scene_drawer_(scene_drawer_),
+    : file_reader_(file_reader_),
+      scene_drawer_(scene_drawer_),
       settings_(settings_) {}
 
 SceneParameters Controller::GetSettings() const {
@@ -82,7 +83,7 @@ bool Controller::AddGifFrame() {
   gif_generator_.AddFrame(
       GetFrameBuffer()
           .scaled(gif_generator_.GetWidth(), gif_generator_.GetHeight())
-          .convertedTo(QImage::Format_RGBA8888)
+          .convertToFormat(QImage::Format_RGBA8888)
           .bits());
 
   return gif_generator_.GetFinished();
@@ -90,4 +91,4 @@ bool Controller::AddGifFrame() {
 
 int Controller::GetGifDelay() const { return gif_generator_.GetDelay(); }
 
-} // namespace s21
+}  // namespace s21

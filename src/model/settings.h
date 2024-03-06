@@ -4,7 +4,7 @@
 #include <QSettings>
 #include <QString>
 
-#include "../../view/include/sceneparameters.h"
+#include "view/sceneparameters.h"
 
 namespace s21 {
 

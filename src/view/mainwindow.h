@@ -10,11 +10,11 @@
 #include <QTimer>
 #include <cmath>
 
-#include "../../controller/include/controller.h"
-#include "../../lib/gif.h"
-#include "../../model/include/gifgenerator.h"
-#include "scenedrawer.h"
-#include "sceneparameters.h"
+#include "controller/controller.h"
+#include "lib/gif/gif.h"
+#include "model/gifgenerator.h"
+#include "view/scenedrawer.h"
+#include "view/sceneparameters.h"
 
 QT_BEGIN_NAMESPACE namespace Ui { class MainWindow; }
 QT_END_NAMESPACE

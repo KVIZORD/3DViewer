@@ -1,0 +1,24 @@
+project(3DViewer)
+
+find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets OpenGL REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
+
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
+add_library(${TARGET_GIF_LIB} STATIC ${LIB_GIF_SOURCES})
+
+add_executable(${PROJECT_NAME}
+main.cc
+${MODEL_SOURCES}
+${VIEW_SOURCES}
+${CONTROLLER_SOURCES}
+)
+
+target_include_directories(${PROJECT_NAME} PUBLIC ${HEADERS_RELATIVE_DIR})
+target_include_directories(${PROJECT_NAME} PUBLIC ${BASE_DIR})
+
+target_link_libraries(${PROJECT_NAME} PRIVATE ${TARGET_GIF_LIB} Qt${QT_VERSION_MAJOR}::Widgets OpenGL)

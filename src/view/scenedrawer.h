@@ -9,9 +9,9 @@
 #include <QTimer>
 #include <cmath>
 
-#include "../model/include/scene.h"
-#include "scenedrawerbase.h"
-#include "sceneparameters.h"
+#include "model/scene.h"
+#include "view/scenedrawerbase.h"
+#include "view/sceneparameters.h"
 
 namespace s21 {
 

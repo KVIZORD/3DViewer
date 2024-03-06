@@ -1,6 +1,6 @@
-#include "include/mainwindow.h"
+#include "view/mainwindow.h"
 
-#include "../model/include/gifgenerator.h"
+#include "model/gifgenerator.h"
 #include "ui_mainwindow.h"
 
 namespace s21 {
@@ -342,11 +342,12 @@ void MainWindow::StartMakingGif() {
   ShowMessage(QString("Идет запись GIF"), QColor(39, 174, 96), 0);
   QString uniq_name =
       QDateTime::currentDateTime().toString("yyyy-MM-dd-hh-mm-ss-z");
-  gif_params_.gif_file_path = QString("%1/video_%2.gif").arg(gif_params_.gif_dir).arg(uniq_name);
+  gif_params_.gif_file_path =
+      QString("%1/video_%2.gif").arg(gif_params_.gif_dir).arg(uniq_name);
 
-  controller_.CreateGif(gif_params_.gif_file_path.toStdString(), gif_params_.gif_width,
-                        gif_params_.gif_height, gif_params_.gif_fps,
-                        gif_params_.gif_duration / 10);
+  controller_.CreateGif(gif_params_.gif_file_path.toStdString(),
+                        gif_params_.gif_width, gif_params_.gif_height,
+                        gif_params_.gif_fps, gif_params_.gif_duration / 10);
   CreateFrameToGif();
 }
 

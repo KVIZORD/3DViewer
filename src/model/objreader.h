@@ -5,26 +5,26 @@
 #include <string>
 #include <vector>
 
-#include "basefilereader.h"
-#include "normalization_parameters.h"
-#include "scene.h"
+#include "model/basefilereader.h"
+#include "model/normalization_parameters.h"
+#include "model/scene.h"
 
 namespace s21 {
 
 class OBJReader : public BaseFileReader {
-public:
+ public:
   const std::string kVertexToken = "v";
   const std::string kFaceToken = "f";
 
-public:
+ public:
   Scene ReadScene(const std::string &) const override;
 
-private:
+ private:
   void ReadFace(std::stringstream &, std::vector<int> &, size_t) const;
   void Read3DCoords(std::stringstream &, std::vector<float> &) const;
   void CalculateNormalizationParams(const std::vector<float> &, Scene &) const;
 };
 
-} // namespace s21
+}  // namespace s21
 
-#endif // _3DVIEWER_MODEL_INCLUDE_OBJREADER_H_
+#endif  // _3DVIEWER_MODEL_INCLUDE_OBJREADER_H_

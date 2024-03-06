@@ -3,7 +3,7 @@
 
 #include <QOpenGLWidget>
 
-#include "../model/include/scene.h"
+#include "model/scene.h"
 #include "sceneparameters.h"
 
 namespace s21 {

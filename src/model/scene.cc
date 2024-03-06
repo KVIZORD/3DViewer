@@ -1,4 +1,4 @@
-#include "include/scene.h"
+#include "model/scene.h"
 
 #include <chrono>
 #include <iostream>
@@ -12,7 +12,6 @@ void Scene::TransformVertices(const TransformMatrix &matrix) {
 size_t Scene::GetCountVertices() const { return vertices_.size() / 3; }
 
 size_t Scene::GetCountEdges() const { return edges_.size() * 0.5; }
-
 
 NormalizationParameters Scene::GetNormalizationParams() {
   return normalization_params_;
@@ -32,4 +31,4 @@ const std::vector<float> &Scene::GetVertices() const { return vertices_; }
 
 const std::vector<int> &Scene::GetEdges() const { return edges_; }
 
-} // namespace s21
+}  // namespace s21

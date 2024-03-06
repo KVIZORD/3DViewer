@@ -1,4 +1,4 @@
-#include "include/objreader.h"
+#include "model/objreader.h"
 
 #include <algorithm>
 #include <fstream>
@@ -107,4 +107,4 @@ Scene OBJReader::ReadScene(const std::string &path) const {
   return scene;
 }
 
-} // namespace s21
+}  // namespace s21
