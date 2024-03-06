@@ -23,9 +23,6 @@ endif
 
 all: install
 
-dvi:
-	open README.md
-
 install: $(BUILD_DIR)
 	cd $(VIEW_DIR) && qmake && make
 	mv $(VIEW_DIR)/$(PROJECT_EXE) $(BUILD_DIR)
