@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>3DViewer_v2.0</string>
+   <string>3DViewer</string>
   </property>
   <property name="documentMode">
    <bool>false</bool>
